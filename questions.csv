@@ -1,0 +1,22 @@
+input,label,question_type,present_in_database
+How much money do employees make on average?,"I don't know",how,false
+How many days off do employees get?,"unlimited",how,true
+What type of healthcare does Blendle provide?,"I don't know",what,false
+What is the learning budget?,"I don't know",what,false
+Does Blendle have a learning budget?,"yes",yesno,true
+Should I have weekly one-on-ones with my manager?,"recommended",yesno,true
+Why is this document public?,"feedback",why,true
+Who should I email about issues with these documents?,"hr@blendle.com",who,true
+How long does someone I referred have to work at Blendle for me to get a bonus?,"month",how,true
+What is the severance package?,"I don't know",what,false
+Who is the CEO of Blendle?,"I don't know",who,false
+What is the Matrix?,"feedback",what,true
+Are there free massages at Blendle?,"yes",yesno,true
+What card do I get for train travel?,"NS",what,true
+Will Blendle buy me a bike?,"no",yesno,false
+Do I need a receipt to reimburse my expenses?,"yes",yesno,true
+Can I drive to the office?,"I don't know",yesno,false
+How much stock compensation do I get?,"I don't know",how,false
+When is salary review?,"january",when,true
+Who is the head of people?,"gemma",who,true
+Where is the company based?,"utrecht",where,true

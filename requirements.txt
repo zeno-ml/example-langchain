@@ -1,0 +1,4 @@
+langchain
+zenoml
+faiss-cpu
+openai

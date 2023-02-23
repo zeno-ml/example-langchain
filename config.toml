@@ -1,0 +1,7 @@
+view = 'chatbot'
+functions = "model.py"
+metadata = 'questions.csv'
+models = ['GPT-3']
+data_column = 'input'
+label_column = 'label'
+port = 8082
