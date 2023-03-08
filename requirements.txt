@@ -1,4 +1,4 @@
 langchain
-zenoml
+zenoml>=0.4.0
 faiss-cpu
 openai

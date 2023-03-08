@@ -4,7 +4,15 @@ import faiss
 from langchain import OpenAI
 from langchain.chains import VectorDBQAWithSourcesChain
 
-from zeno import ZenoOptions, distill, metric, model
+from zeno import (
+    DistillReturn,
+    MetricReturn,
+    ModelReturn,
+    ZenoOptions,
+    distill,
+    metric,
+    model,
+)
 
 
 @model
@@ -27,18 +35,21 @@ def get_model(model_name):
             res.append(
                 "Answer: {}\nSources: {}".format(result["answer"], result["sources"])
             )
-        return res
+        return ModelReturn(model_output=res)
 
     return pred
 
 
 @distill
 def correct(df, ops: ZenoOptions):
-    return df.apply(
-        lambda x: x[ops.label_column].lower() in x[ops.output_column].lower(), axis=1
+    return DistillReturn(
+        distill_output=df.apply(
+            lambda x: x[ops.label_column].lower() in x[ops.output_column].lower(),
+            axis=1,
+        )
     )
 
 
 @metric
 def accuracy(df, ops: ZenoOptions):
-    return df[ops.distill_columns["correct"]].astype(int).mean()
+    return MetricReturn(metric=df[ops.distill_columns["correct"]].astype(int).mean())
